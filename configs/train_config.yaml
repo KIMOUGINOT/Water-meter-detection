@@ -1,0 +1,7 @@
+path: data/train/
+train: train
+val: valid
+test: images
+
+names:
+  0: water_meter
