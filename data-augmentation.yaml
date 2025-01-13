@@ -1,0 +1,21 @@
+# Dossiers
+input_folder: "./data/x_test_augmented/train/images"  # Chemin du dossier contenant les images originales
+output_folder: "./data/x_test_augmented/train/augmented_images"  # Chemin du dossier pour les images augmentées
+
+# Paramètres d'augmentation
+augmentation:
+  rotation_range:  # Plage de rotation aléatoire
+    min: -30       # Angle minimum (en degrés)
+    max: 30        # Angle maximum (en degrés)
+  brightness_range:  # Plage de modification de luminosité
+    min: 0.5       # Facteur de luminosité minimum
+    max: 1.5       # Facteur de luminosité maximum
+  augmentation_factor: 5  # Nombre d'augmentations à générer par image
+
+# Extensions acceptées
+valid_extensions:
+  - .jpg
+  - .jpeg
+  - .png
+  - .bmp
+  - .tiff
