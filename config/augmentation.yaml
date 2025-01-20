@@ -1,12 +1,12 @@
 # Dossiers
-input_folder: "./data/raw/"  # Chemin du dossier contenant les images originales
+input_folder: "./data/training/"  # Chemin du dossier contenant les images originales
 output_folder: "./data/augmented/"  # Chemin du dossier pour les images augmentées
 
 # Paramètres d'augmentation
 augmentation:
   rotation_range:  # Plage de rotation aléatoire
-    min: -30       # Angle minimum (en degrés)
-    max: 30        # Angle maximum (en degrés)
+    min: -180       # Angle minimum (en degrés)
+    max: 180        # Angle maximum (en degrés)
   brightness_range:  # Plage de modification de luminosité
     min: 0.5       # Facteur de luminosité minimum
     max: 1.5       # Facteur de luminosité maximum

@@ -1,6 +1,6 @@
-# Water meter detected Directory
+# Input Data Directory
 
-This directory contains the water meter detected in the dataset .
+This directory contains the data on which we want to make predictions.
 
 ## Structure
 - `images/`: Contains the raw images of the dataset.

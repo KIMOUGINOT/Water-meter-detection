@@ -10,14 +10,23 @@ The repository is organized as follows:
 
 ```
 .
+├── config/
+│   ├── augmentation.yaml  # Configuration for data augmentation
+│   ├── training.yaml      # Configuration for models training
+│   └── predict.yaml       # Configuration for the prediction
 ├── data/
 │   ├── augmented/         # Augmented dataset (images and labels)
-│   ├── cropped/           # Cropped data containing only digits
-│   ├── output/            # Output files from the trained models (predictions, metrics, etc.)
-│   ├── raw/               # Original dataset (images and labels)
-│   └── README.md          # Documentation for the dataset directories
-├── models/                # YOLO models used for detection and digit recognition
-├── src/                   # Scripts for data augmentation, training, and evaluation
+│   ├── cropped/           # Cropped dataset containing only digits
+│   ├── input/             # Original dataset to predict
+│   ├── results/           # Output files from the trained models (predictions, metrics, etc.)
+│   └── training/          # Training dataset (images and labels)
+├── models/                
+│   ├── digit_detection    # Contains the digit detection model and what is related 
+│   └── water_meter        # Contains the water meter detection model and what is related
+├── src/                   
+│   ├── training/          # Directory for training scripts 
+│   ├── Cropping.py        # Class for dataset cropping
+│   └── Predict.py         # Class for models prediction
 ├── README.md              # Main project documentation
 └── requirements.txt       # Python dependencies
 ```
