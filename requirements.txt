@@ -1,0 +1,9 @@
+numpy
+opencv-python
+pillow
+yaml
+ultralytics
+shutil
+matplotlib
+onnxruntime
+tqdm
