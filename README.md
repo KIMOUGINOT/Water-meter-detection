@@ -59,35 +59,44 @@ The repository is organized as follows:
 
 ## Usage
 
-### 1. Data Preparation
+### 1. Training Pipeline
+
+#### Data Preparation
 - Place the original dataset in `data/raw/`:
   - Images in `data/raw/images/`.
   - Corresponding YOLO format labels in `data/raw/labels/`.
 
-### 2. Data Augmentation
+#### Data Augmentation
 Run the augmentation script to generate augmented images and labels:
 ```bash
-python scripts/data_augmentation.py --config data-augmentation.yaml
+python src/DataAugmentation.py
 ```
 The augmented data will be saved in `data/augmented/`.
 
-### 3. Model Training
+#### Model Training
 Train the YOLO models using the prepared dataset:
 ```bash
-python scripts/train_yolo.py --config config.yaml
+python scripts/train_yolo.py --config config/training.yaml
 ```
 
-### 4. Model Evaluation
+#### Model Evaluation
 Evaluate the trained model's performance:
 ```bash
 python scripts/evaluate_model.py --model models/yolo_finetuned.pt
 ```
 
-### 5. Prediction
-Use the trained model to predict on new images:
+### 2. Prediction Pipeline
+
+#### Predict on New Images
+Place the new images to predict in `data/input/images/`.
+
+Run the prediction script to detect water meters, crop them, and predict digits:
 ```bash
-python scripts/predict.py --model models/yolo_finetuned.pt --input ./data/new_images
+python src/Predict.py
 ```
+The results will be saved in:
+- Cropped images and labels: `data/cropped/`
+- Final predictions and annotated images: `data/results/`.
 
 ---
 
