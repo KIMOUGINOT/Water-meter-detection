@@ -11,15 +11,13 @@ The repository is organized as follows:
 ```
 .
 ├── data/
-│   ├── raw/               # Original dataset (images and labels)
-│   │   ├── images/        # Raw images
-│   │   ├── labels/        # Labels in YOLO format
 │   ├── augmented/         # Augmented dataset (images and labels)
-│   ├── processed/         # Preprocessed data ready for model training (optional)
+│   ├── cropped/           # Cropped data containing only digits
+│   ├── output/            # Output files from the trained models (predictions, metrics, etc.)
+│   ├── raw/               # Original dataset (images and labels)
 │   └── README.md          # Documentation for the dataset directories
-├── models/                # YOLO models used for detection and recognition
-├── scripts/               # Scripts for data augmentation, training, and evaluation
-├── results/               # Output files from the trained models (predictions, metrics, etc.)
+├── models/                # YOLO models used for detection and digit recognition
+├── src/                   # Scripts for data augmentation, training, and evaluation
 ├── README.md              # Main project documentation
 └── requirements.txt       # Python dependencies
 ```
