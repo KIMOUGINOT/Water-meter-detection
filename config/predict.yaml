@@ -1,0 +1,13 @@
+water_meter_model: "models/water_meter/best.pt"  # Path to the water meter detection model
+
+# Path to the digit recognition model
+digit_model: "models/digit_detection/best.pt"
+
+# Input directory containing images and labels for water meter detection
+input_dir: "data/input"
+
+# Directory to store cropped images and their corresponding labels
+cropped_dir: "data/cropped"
+
+# Output directory for final digit predictions
+output_dir: "data/results"
