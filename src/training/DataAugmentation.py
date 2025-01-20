@@ -92,3 +92,10 @@ if __name__ == "__main__":
     config_path = "./src/training/data-augmentation.yaml"  # Path to the configuration file
     augmenter = DataAugmentation(config_path)
     augmenter.process_images_and_labels()
+
+############# Erreur à noter ##############
+# L'augmentation de donnée ne modifie pas #
+# les coords de a bounding box donc celle #
+# ci est éronnée dans les données augmen- #
+# tés.                                    #
+###########################################
