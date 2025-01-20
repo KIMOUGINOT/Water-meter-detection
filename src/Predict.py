@@ -117,3 +117,10 @@ if __name__ == "__main__":
 
     predictor = Predict(config)
     predictor.predict()
+
+############# Erreur à noter ##############
+# Si le nombre de fichier est >700, ça va #
+# planter à cause de problème de mémoire  #
+# Ca arrive pendant la prediction des mo- #
+# dèles.                                  #
+###########################################
